@@ -7,3 +7,4 @@ def index():
     user = {'username': 'Soenke'}
     return render_template('index.html', user=user)
     #return render_template('index.html', title='Home', user=user)
+
