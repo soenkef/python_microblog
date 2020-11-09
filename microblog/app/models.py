@@ -58,8 +58,6 @@ class User(UserMixin, db.Model):
         return followed.union(own).order_by(Post.timestamp.desc())
 
 
-
-
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(140))
