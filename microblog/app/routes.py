@@ -1,13 +1,12 @@
 from flask import render_template, flash, redirect, url_for, request
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, EditProfileForm, EmptyForm, PostForm
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, EmptyForm, PostForm, ResetPasswordForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Post
 from werkzeug.urls import url_parse
 from datetime import datetime
 from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
-from app.forms import ResetPasswordForm
 
 @app.before_request
 def before_request():
