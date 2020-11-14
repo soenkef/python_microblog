@@ -1,7 +1,8 @@
 from threading import Thread
+from flask import render_template
 from flask_mail import Message
 from app import mail, app
-from flask import render_template
+
 
 def send_password_reset_email(user):
     token = user.get_reset_password_token()
