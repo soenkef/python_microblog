@@ -1,0 +1,109 @@
+2020-11-09 11:41:15,078 ERROR: Exception on /user/admin [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/amboss/microblog/app/routes.py", line 78, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/amboss/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/amboss/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/amboss/microblog/app/templates/user.html", line 16, in block "content"
+    <form action="{{ url_for('follow', username=user.username) }}" method="post">
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
+2020-11-09 12:16:37,390 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 09:59:35,787 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 10:01:24,433 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 10:24:38,777 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 10:41:34,667 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 10:41:38,768 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/amboss/microblog/app/routes.py", line 19, in index
+    return render_template('index.html', title='Home', posts=posts)
+NameError: name 'posts' is not defined
+2020-11-11 10:42:01,136 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 10:42:04,194 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/amboss/microblog/app/routes.py", line 19, in index
+    return render_template('index.html', title='Home')
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/amboss/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/amboss/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/amboss/microblog/app/templates/index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2020-11-11 10:49:00,896 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
+2020-11-11 11:00:31,184 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]

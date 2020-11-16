@@ -17,4 +17,6 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['your-email@example.com']
     # Sprachunterstützung
-    LANGUAGES = ['de', 'en', 'es']
+    LANGUAGES = ['de', 'en']
+    # Microsoft Azure-Api-key
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
