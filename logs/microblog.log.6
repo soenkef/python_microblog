@@ -1,84 +1,4 @@
-2020-11-11 11:00:33,987 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/amboss/microblog/app/routes.py", line 27, in index
-    return render_template("index.html", title='Home Page', form=form,
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/amboss/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/amboss/microblog/app/templates/base.html", line 15, in template
-    <a href="{{ url_for('explore'}}">Explore</a>
-jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
-2020-11-11 11:00:55,459 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
-2020-11-11 11:02:08,291 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
-2020-11-11 11:02:37,312 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
-2020-11-11 11:03:09,460 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
-2020-11-11 11:08:09,441 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
-2020-11-11 11:20:33,882 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:51]
-2020-11-11 11:55:23,827 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
-2020-11-11 11:55:26,543 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/amboss/microblog/app/routes.py", line 28, in index
-    page, app.config['POST_PER_PAGE'], False)
-KeyError: 'POST_PER_PAGE'
-2020-11-11 11:59:41,843 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:00:59,757 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:02:45,823 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:04:41,683 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:13:18,846 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:15:38,758 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:16:04,881 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:18:00,402 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:21:07,894 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:22:24,695 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:22:55,989 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:23:57,244 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:25:07,689 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:29:42,512 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:30:39,718 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:29]
-2020-11-11 12:33:44,738 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:31]
-2020-11-11 12:34:32,605 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:31]
-2020-11-11 12:34:36,601 ERROR: Exception on / [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2020-11-11 12:35:55,467 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -97,8 +17,8 @@ Traceback (most recent call last):
   File "/home/amboss/microblog/app/routes.py", line 27, in index
     posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
 KeyError: 'POSTS_PER_PAGE'
-2020-11-11 12:34:48,743 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:31]
-2020-11-11 12:34:51,171 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2020-11-11 12:41:32,705 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 12:41:52,742 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -117,4 +37,94 @@ Traceback (most recent call last):
   File "/home/amboss/microblog/app/routes.py", line 27, in index
     posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
 KeyError: 'POSTS_PER_PAGE'
-2020-11-11 12:35:46,138 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:31]
+2020-11-11 12:44:01,320 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 12:47:14,116 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 12:49:03,913 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 12:57:50,321 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 13:06:33,961 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 13:07:12,262 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-11 13:16:53,084 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-13 10:12:53,086 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-13 10:13:04,841 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-13 10:13:32,020 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-13 10:14:02,546 ERROR: Exception on /edit_profile [POST] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/amboss/microblog/app/routes.py", line 95, in edit_profile
+    db.session.commit()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2536, in flush
+    self._flush(objects)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2638, in _flush
+    flush_context.execute()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 230, in save_obj
+    _emit_update_statements(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 994, in _emit_update_statements
+    c = cached_connections[connection].execute(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('admin', '', 7)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2020-11-13 10:14:33,162 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:32]
+2020-11-13 10:23:45,974 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
+2020-11-13 10:30:59,000 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
+2020-11-13 11:15:54,590 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
+2020-11-13 11:16:03,796 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
+2020-11-13 11:21:55,236 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
+2020-11-13 15:17:09,946 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
+2020-11-13 15:23:16,045 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:34]
