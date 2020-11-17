@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-15 19:57+0000\n"
+"POT-Creation-Date: 2020-11-16 20:55+0000\n"
 "PO-Revision-Date: 2020-11-15 20:06+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: app/__init__.py:21
+#: app/__init__.py:20
 msgid "Please log in to access this page"
 msgstr ""
 
@@ -26,103 +26,111 @@ msgstr ""
 msgid "[Microblog] Reset Your Password"
 msgstr ""
 
-#: app/forms.py:9 app/forms.py:15 app/forms.py:32
+#: app/forms.py:8 app/forms.py:14 app/forms.py:31
 msgid "Username"
 msgstr ""
 
-#: app/forms.py:10 app/forms.py:17 app/forms.py:59 app/forms.py:60
+#: app/forms.py:9 app/forms.py:16 app/forms.py:58 app/forms.py:59
 msgid "Password"
 msgstr ""
 
-#: app/forms.py:11
+#: app/forms.py:10
 msgid "Remember Me"
 msgstr ""
 
-#: app/forms.py:12 app/templates/login.html:5
+#: app/forms.py:11 app/templates/login.html:5
 msgid "Sign In"
 msgstr ""
 
-#: app/forms.py:16 app/forms.py:55
+#: app/forms.py:15 app/forms.py:54
 msgid "Email"
 msgstr ""
 
-#: app/forms.py:18
+#: app/forms.py:17
 msgid "Repeat Password"
 msgstr ""
 
-#: app/forms.py:19 app/templates/register.html:5
+#: app/forms.py:18 app/templates/register.html:5
 msgid "Register"
 msgstr ""
 
-#: app/forms.py:24 app/forms.py:44
+#: app/forms.py:23 app/forms.py:43
 msgid "Please use a different username."
 msgstr ""
 
-#: app/forms.py:29
+#: app/forms.py:28
 msgid "Please use a different email address."
 msgstr ""
 
-#: app/forms.py:33
+#: app/forms.py:32
 msgid "About me"
 msgstr ""
 
-#: app/forms.py:34 app/forms.py:47 app/forms.py:52
+#: app/forms.py:33 app/forms.py:46 app/forms.py:51
 msgid "Submit"
 msgstr ""
 
-#: app/forms.py:50
+#: app/forms.py:49
 msgid "Say something"
 msgstr ""
 
-#: app/forms.py:56 app/forms.py:61
+#: app/forms.py:55 app/forms.py:60
 msgid "Request Password Reset"
 msgstr ""
 
-#: app/routes.py:27
+#: app/routes.py:33
 msgid "Your post is now live!"
 msgstr ""
 
-#: app/routes.py:48
+#: app/routes.py:54
 msgid "Invalid username or password"
 msgstr ""
 
-#: app/routes.py:72
+#: app/routes.py:78
 msgid "Congratulations, you are now a registered user!"
 msgstr ""
 
-#: app/routes.py:99
+#: app/routes.py:105
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app/routes.py:114
+#: app/routes.py:120
 #, python-format
 msgid "User %(username)s not found."
 msgstr ""
 
-#: app/routes.py:117
+#: app/routes.py:123
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app/routes.py:121
+#: app/routes.py:127
 #, python-format
 msgid "You are following %(username)s!"
 msgstr ""
 
-#: app/routes.py:137
+#: app/routes.py:143
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app/routes.py:141
+#: app/routes.py:147
 #, python-format
 msgid "You are not following %(username)s."
 msgstr ""
 
-#: app/routes.py:168
+#: app/routes.py:174
 msgid "Check your email for the instructions to reset your password"
 msgstr ""
 
-#: app/routes.py:184
+#: app/routes.py:190
 msgid "Your password has been reset."
+msgstr ""
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:18
+msgid "Error: the translation service failed."
 msgstr ""
 
 #: app/templates/404.html:4
@@ -146,16 +154,24 @@ msgstr ""
 msgid "%(username)s said %(when)s"
 msgstr ""
 
-#: app/templates/base.html:26
+#: app/templates/_post.html:28
+msgid "Translate"
+msgstr ""
+
+#: app/templates/base.html:21
 msgid "Home"
 msgstr ""
 
-#: app/templates/base.html:27
+#: app/templates/base.html:22
 msgid "Explore"
 msgstr ""
 
-#: app/templates/base.html:40
+#: app/templates/base.html:35
 msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:73
+msgid "Error: Could not contact server."
 msgstr ""
 
 #: app/templates/edit_profile.html:5
