@@ -1,41 +1,4 @@
-2020-11-14 20:02:39,060 ERROR: Exception on /reset_password_request [POST] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/amboss/microblog/app/routes.py", line 166, in reset_password_request
-    send_password_reset_email(user)
-  File "/home/amboss/microblog/app/email.py", line 9, in send_password_reset_email
-    send_email('[Microblog] Reset Your Password',
-  File "/home/amboss/microblog/app/email.py", line 25, in send_email
-    Thread(target=send_async_email, args=(app, msg).start())
-AttributeError: 'tuple' object has no attribute 'start'
-2020-11-14 20:06:59,424 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:08:19,506 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:09:15,183 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:13:24,656 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:18:57,140 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:22:12,175 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:28:27,435 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-14 20:46:09,211 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-15 11:14:54,332 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-15 12:24:19,061 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-15 12:25:39,298 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:35]
-2020-11-15 13:26:20,306 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 13:29:56,601 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 13:38:46,152 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 13:40:36,760 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 13:44:02,382 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 13:44:05,760 ERROR: Exception on /user/soenke [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2020-11-15 19:53:19,666 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -51,33 +14,91 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/amboss/microblog/app/routes.py", line 87, in user
-    return render_template('user.html', user=user, posts=posts.items,
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
+  File "/home/amboss/microblog/app/routes.py", line 35, in index
+    return render_template('index.html', title='Home', form=form,
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
   File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/amboss/microblog/app/templates/user.html", line 25, in template
-    <form action="{{ url_for('unfollow', username=user.username) }}" method="post">
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got '{'
-2020-11-15 13:44:36,861 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 18:31:42,139 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:37]
-2020-11-15 19:22:03,120 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:39]
-2020-11-15 19:27:46,503 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:39]
-2020-11-15 19:32:02,870 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
-2020-11-15 19:32:14,056 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
-2020-11-15 19:40:27,729 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
-2020-11-15 19:49:15,497 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
-2020-11-15 19:53:15,139 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
+  File "/home/amboss/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/amboss/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/amboss/microblog/app/templates/base.html", line 60, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/amboss/microblog/app/templates/index.html", line 12, in block "app_content"
+    {% include '_post.html' %}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/amboss/microblog/app/templates/_post.html", line 15, in template
+    username=user_link, when=moment(post.timestamp).fromNow() }}:
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2020-11-15 19:54:00,693 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
+2020-11-15 19:54:03,628 ERROR: Exception on /index [GET] [in /home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/amboss/microblog/app/routes.py", line 35, in index
+    return render_template('index.html', title='Home', form=form,
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/amboss/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/amboss/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/amboss/microblog/app/templates/base.html", line 60, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/amboss/microblog/app/templates/index.html", line 12, in block "app_content"
+    {% include '_post.html' %}
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/amboss/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/amboss/microblog/app/templates/_post.html", line 15, in template
+    username=user_link, when=moment(post.timestamp).fromNow() }}
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2020-11-15 19:54:30,315 INFO: Microblog startup [in /home/amboss/microblog/app/__init__.py:41]
